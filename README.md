@@ -25,7 +25,7 @@ Github：[https://github.com/ccdalao/NetEase-cloud-music-review-API](https://git
 使用教程
 
 新建demo.html文件
-
+ 
 引入jquery文件（本api运行需要开源插件jq支持（后续考虑使用原生js））
 
 实例（获取单曲中的普通评论）
