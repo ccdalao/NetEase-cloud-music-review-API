@@ -30,40 +30,27 @@ Github：[https://github.com/ccdalao/NetEase-cloud-music-review-API](https://git
 
 实例（获取单曲中的普通评论）
 
-    $("#btn-3").click(function(){
-    	var su = parseInt(Math.random() * 20) //随机生成0-20之间的随机数
-    	var id = "504835560";  //单曲id
-    	var cont = "id=" + id
-    	$.ajax({
-    		url: 'song_pt.php',
-    		//引入github中下载的song.php
-    		type: 'get',
-    		//请求方式get
-    		dataType: 'json',
-    		data: cont,
-    		success: function(data) {
-    			var str = data
-    			var yeshu = str[20].total - 20
-    			var cc = parseInt(Math.random() * yeshu)
-    			var cont_ok = "id=" + id + "&offset=" + cc;
-    			$.ajax({
-    				url: 'song_pt.php',
-    				//引入github中下载的song.php
-    				type: 'get',
-    				//请求方式get
-    				dataType: 'json',
-    				data: cont_ok,
-    				success: function(data) {
-    					var str = data
-    					$("#nn-3").html("获取歌曲" + id + "普通评论");
-    					$("#n-3").html(str[su].comment);
-    
-    
-    				}
-    			});
-    		}
-    	});  
-    });
+        $("#btn-2").click(function () {
+            var su = parseInt(Math.random() * 15) //随机生成0-15之间的随机数
+            var id_in = ["36871866", "554242185", "554242185", "29436904", "34497036", "441618579", "504974392",
+                    "287063", "444356086", "504974392", "35331192", "460578703", "528273459", "426027293", "569214126",
+                    "541687281", "30031502", "1305547844", "557581476", "557584888", "536570450", "482988775",
+                    "1300423695", "30854398", "501755851", "499611311", "409649830", "411356967", "511503019", "286602",
+                    "28815250", "35625821", "523114596", "399353833", "35345243"]; //自定义歌曲id
+            var id = id_in[Math.floor(Math.random() * id_in.length)];
+            var cont = "id=" + id;
+            $.ajax({
+                url: 'song.php',//引入song.php
+                type: 'get',//请求方式get
+                dataType: 'json',
+                data: cont,
+                success: function (data) {
+                    var str = data
+                    $("#nn-2").html("获取歌曲" + id + "热评");
+                    $("#n-2").html(str[su].comment);
+                }
+            });
+        });
 
 ![](//qqadapt.qpic.cn/txdocpic/0/818d3b98c045ccea67ce3c68a9877489/0)
 实例图片：
