@@ -8,9 +8,9 @@ if ($_GET['id']) {
     $offset  = $_GET['offset'];
     $time = 0;
     $arr = 0;
-    $jsonStr = file_get_contents('https://music.163.com/api/v1/resource/comments/R_SO_4_' . $musicid . '?limit=15&offset='.$offset.'', false, $context);
+    $jsonStr = file_get_contents('https://music.163.com/api/v1/resource/comments/R_SO_4_' . $musicid . '?limit=20&offset='.$offset.'', false, $context);
     $jsonStrs = json_decode($jsonStr, true);
-    foreach ($jsonStrs['hotComments'] as $val) {
+    foreach ($jsonStrs['comments'] as $val) {
         $time++;
         $arr++;
         $m_author = $val['user']['nickname'];
