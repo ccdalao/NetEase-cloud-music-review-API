@@ -25,7 +25,7 @@ Github：[https://github.com/ccdalao/NetEase-cloud-music-review-API](https://git
 使用教程
 
 新建demo.html文件
- 
+
 引入jquery文件（本api运行需要开源插件jq支持（后续考虑使用原生js））
 
 实例（获取单曲中的普通评论）
@@ -65,12 +65,13 @@ Github：[https://github.com/ccdalao/NetEase-cloud-music-review-API](https://git
     	});  
     });
 
-
+![](//qqadapt.qpic.cn/txdocpic/0/818d3b98c045ccea67ce3c68a9877489/0)
+实例图片：
+![](http://cc.yunun.cc/usr/uploads/2018/08/243104277.png)
 ![](//qqadapt.qpic.cn/txdocpic/0/818d3b98c045ccea67ce3c68a9877489/0)
 
 关于网易云音乐接口
 
-* * *
 
 瞎猫碰到死耗子
 
