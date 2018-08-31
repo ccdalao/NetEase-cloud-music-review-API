@@ -30,28 +30,40 @@ Github：[https://github.com/ccdalao/NetEase-cloud-music-review-API](https://git
 
 实例（获取单曲中的普通评论）
 
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> 
-    <input type="submit" id="btn" value="btn">
-    <br>
-    <div><p id="n"></p></div>
-    <script>
-    $("#btn").click(function(){
-    var su = parseInt(Math.random()*20) //随机生成0-20之间的随机数
-    var cc = parseInt(Math.random()*1000) //随机生成0-1000之间的随机数
-    var id = "504835560";
-    var cont = "id=" + id +"&limit=20&offset=" + cc;
-       $.ajax({
-           url:'song.php', //引入github 中下载的song.php
-           type:'get',  //请求方式get
-           dataType:'json',
-           data:cont,
-           success:function(data){
-               var str = data
-               $("#n").html(str[su].comment); //将获取的评论显示到id为n的元素中
-          }
-      }); 
+    $("#btn-3").click(function(){
+    	var su = parseInt(Math.random() * 20) //随机生成0-20之间的随机数
+    	var id = "504835560";  //单曲id
+    	var cont = "id=" + id
+    	$.ajax({
+    		url: 'song_pt.php',
+    		//引入github中下载的song.php
+    		type: 'get',
+    		//请求方式get
+    		dataType: 'json',
+    		data: cont,
+    		success: function(data) {
+    			var str = data
+    			var yeshu = str[20].total - 20
+    			var cc = parseInt(Math.random() * yeshu)
+    			var cont_ok = "id=" + id + "&offset=" + cc;
+    			$.ajax({
+    				url: 'song_pt.php',
+    				//引入github中下载的song.php
+    				type: 'get',
+    				//请求方式get
+    				dataType: 'json',
+    				data: cont_ok,
+    				success: function(data) {
+    					var str = data
+    					$("#nn-3").html("获取歌曲" + id + "普通评论");
+    					$("#n-3").html(str[su].comment);
+    
+    
+    				}
+    			});
+    		}
+    	});  
     });
-    </script>
 
 
 ![](//qqadapt.qpic.cn/txdocpic/0/818d3b98c045ccea67ce3c68a9877489/0)
