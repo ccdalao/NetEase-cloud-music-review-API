@@ -61,9 +61,11 @@ dome：[http://api.163music.yunun.cc](http://api.163music.yunun.cc)
 ![](http://cc.yunun.cc/usr/uploads/2018/08/2383745570.gif)
 ---------
 新增(v1.2)qqbot机器人插件 获取网易云音乐热评：
-    输入 qq plug QqBotApi_MU163CC
-    若提示  成功：加载插件 QqBotApi_MU163CC（回调函数['onQQMessage']、定时任务[]） 则加载成功
+>输入 qq plug QqBotApi_MU163CC <br>
+>若提示  成功：加载插件 QqBotApi_MU163CC（回调函数['onQQMessage']、定时任务[]） 则加载成功
 
+实例图片：
+![](http://cc.yunun.cc/usr/uploads/2018/08/2383745570.gif)
 
 千山万水总是情，给个star行不行
 
