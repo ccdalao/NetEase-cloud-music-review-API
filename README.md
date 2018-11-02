@@ -19,7 +19,9 @@ dome：[http://api.163music.yunun.cc](http://api.163music.yunun.cc)
 ###### 一言(Hitokoto)网创立于2016年，隶属于萌创Team，目前网站主要提供一句话服务。不论在哪里，总有那么几个句子能穿透你的心。把这些句子汇聚起来，传递更多的感动。简单来说，一言(Hikototo)指的就是一句话，可以是动漫中的台词，也可以是网络上的各种小段子。留下你所喜欢的那一句话，与大家分享，这就是一言(Hitokoto)存在的目的。
 
 感谢：接管Hitokoto项目的负责人的指导
-
+     v1：基础项目
+     v1.1：在线看热评猜歌曲
+     v1.2：qqbot机器人插件
 
 
 网易云音乐热评调用API
@@ -55,9 +57,12 @@ dome：[http://api.163music.yunun.cc](http://api.163music.yunun.cc)
         });
 
 ![](//qqadapt.qpic.cn/txdocpic/0/818d3b98c045ccea67ce3c68a9877489/0)
-图片：
+网页实例图片：
 ![](http://cc.yunun.cc/usr/uploads/2018/08/2383745570.gif)
-
+---------
+新增(v1.2)qqbot机器人插件 获取网易云音乐热评：
+    输入 qq plug QqBotApi_MU163CC
+    若提示  成功：加载插件 QqBotApi_MU163CC（回调函数['onQQMessage']、定时任务[]） 则加载成功
 
 
 千山万水总是情，给个star行不行
