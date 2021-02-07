@@ -21,6 +21,7 @@ dome：[http://api.163music.yunun.cc](http://api.163music.yunun.cc)
      v1：基础项目
      v1.1：在线看热评猜歌曲
      v1.2：qqbot机器人插件
+     v2.0：在V1的基础上，不再通过手动传入歌曲id进行获取，而是通过传入歌单，获取整个歌单
 
 
 网易云音乐热评调用API
@@ -34,61 +35,25 @@ dome：[http://api.163music.yunun.cc](http://api.163music.yunun.cc)
 实例（获取单曲中的普通评论）
 
 ```javascript
-    $("#btn-2").click(function () {
-        var su = parseInt(Math.random() * 15) //随机生成0-15之间的随机数
-        var id_in = ["36871866", "554242185", "554242185", "29436904", "34497036", "441618579", "504974392",
-                "287063", "444356086", "504974392", "35331192", "460578703", "528273459", "426027293", "569214126",
-                "541687281", "30031502", "1305547844", "557581476", "557584888", "536570450", "482988775",
-                "1300423695", "30854398", "501755851", "499611311", "409649830", "411356967", "511503019", "286602",
-                "28815250", "35625821", "523114596", "399353833", "35345243"]; //自定义歌曲id
-        var id = id_in[Math.floor(Math.random() * id_in.length)];
-        var cont = "id=" + id;
-        $.ajax({
-            url: 'song.php',//引入song.php
-            type: 'get',//请求方式get
-            dataType: 'json',
-            data: cont,
-            success: function (data) {
-                var str = data
-                $("#nn-2").html("获取歌曲" + id + "热评");
-                $("#n-2").html(str[su].comment);
-            }
-        });
-    });
+   var su = parseInt(Math.random() * 15) //随机生成0-15之间的随机数
+    
+            $.ajax({
+                url: 'm2.php?id='+$('#music_outchain_id').val(),//引入song.php
+                type: 'get',//请求方式get
+                dataType: 'json',
+
+                success: function (data) {
+                    var str = data
+                    $("#nn-2").html("获取歌单" + $('#music_outchain_id').val() + "热评");
+                    $("#n-2").html(str[su].comment);
+                }
+            });
 ```
 
 
 网页实例图片：
-![](http://cc.yunun.cc/usr/uploads/2018/08/2383745570.gif)
+![](https://blog.ccdalao.cn/usr/uploads/2021/02/3045342982.png)
 ---------
-新增(v1.2)qqbot机器人插件 获取网易云音乐热评：
->输入 
->
->`qq plug QqBotApi_MU163CC`
->若提示  
->
->`成功：加载插件 QqBotApi_MU163CC（回调函数['onQQMessage']、定时任务[]）` 
->
->则加载成功
-
-实例图片：
-![](http://cc.yunun.cc/usr/uploads/2018/11/1211075128.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 千山万水总是情，给个star行不行
 
