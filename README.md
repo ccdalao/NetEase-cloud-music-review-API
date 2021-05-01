@@ -9,7 +9,7 @@ CcDalao
 
 Github：[https://github.com/ccdalao/NetEase-cloud-music-review-API](https://github.com/ccdalao/NetEase-cloud-music-review-API)
 
-dome：[http://api.163music.yunun.cc](http://api.163music.yunun.cc)
+dome：[https://blog.ccdalao.cn/blog/some/musicv2/musicv2.html](https://blog.ccdalao.cn/blog/some/musicv2/musicv2.html)
 
 
 
