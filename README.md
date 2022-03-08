@@ -19,8 +19,11 @@ dome：[https://blog.ccdalao.cn/blog/some/musicv2/musicv2.html](https://blog.ccd
 
 感谢：接管Hitokoto项目的负责人的指导
      v1：基础项目
+     
      v1.1：在线看热评猜歌曲
+     
      v1.2：qqbot机器人插件
+     
      v2.0：在V1的基础上，不再通过手动传入歌曲id进行获取，而是通过传入歌单，获取整个歌单
 
 
